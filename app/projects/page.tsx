@@ -1,15 +1,19 @@
 import Link from "next/link";
-import React from "react";
+import { Metadata } from 'next';
 import { allProjects } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
 import { Redis } from "@upstash/redis";
 import { Eye } from "lucide-react";
+import { CardTag } from "../components/Tag";
 
 const redis = Redis.fromEnv();
 
-export const revalidate = 60;
+// export const revalidate = 60;
+export const metadata: Metadata = {
+  title: 'Projects',
+};
 export default async function ProjectsPage() {
   const views = (
     await redis.mget<number[]>(
@@ -20,11 +24,10 @@ export default async function ProjectsPage() {
     return acc;
   }, {} as Record<string, number>);
 
-  const featured = allProjects.find((project) => project.slug === "unkey")!;
-  const top2 = allProjects.find((project) => project.slug === "planetfall")!;
-  const top3 = allProjects.find((project) => project.slug === "highstorm")!;
+  const featured = allProjects.find((project) => project.slug === "findmybridge")!;
+  const top2 = allProjects.find((project) => project.slug === "magnifyer")!;
+  const top3 = allProjects.find((project) => project.slug === "fundraising-dapp")!;
   const sorted = allProjects
-    .filter((p) => p.published)
     .filter(
       (project) =>
         project.slug !== featured.slug &&
@@ -46,7 +49,7 @@ export default async function ProjectsPage() {
             Projects
           </h2>
           <p className="mt-4 text-zinc-400">
-            Some of the projects are from work and some are on my own time.
+          Some projects are freelance work, while others are personal projects.
           </p>
         </div>
         <div className="w-full h-px bg-zinc-800" />
@@ -57,22 +60,14 @@ export default async function ProjectsPage() {
               <article className="relative w-full h-full p-4 md:p-8">
                 <div className="flex items-center justify-between gap-2">
                   <div className="text-xs text-zinc-100">
-                    {featured.date ? (
-                      <time dateTime={new Date(featured.date).toISOString()}>
-                        {Intl.DateTimeFormat(undefined, {
-                          dateStyle: "medium",
-                        }).format(new Date(featured.date))}
-                      </time>
-                    ) : (
-                      <span>SOON</span>
-                    )}
-                  </div>
-                  <span className="flex items-center gap-1 text-xs text-zinc-500">
+                    <span className="flex items-center gap-1 text-xs text-zinc-500">
                     <Eye className="w-4 h-4" />{" "}
                     {Intl.NumberFormat("en-US", { notation: "compact" }).format(
                       views[featured.slug] ?? 0,
                     )}
                   </span>
+                  </div>
+                  <CardTag label={featured.workType ?? 'own'} />
                 </div>
 
                 <h2
