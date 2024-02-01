@@ -1,7 +1,7 @@
 // @ts-nocheck
 import * as React from "react";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import { useMDXComponent } from "next-contentlayer/hooks";
 
 function clsx(...args: any) {
@@ -63,7 +63,8 @@ const components = {
 		/>
 	),
 	a: ({ className, ...props }) => (
-		<Link
+		<a
+			target="_blank"
 			className={clsx(
 				"font-medium text-zinc-900 underline underline-offset-4",
 				className,

@@ -6,19 +6,19 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "chronark.com",
-    template: "%s | chronark.com",
+    default: "FcoGomez.work",
+    template: "%s | FcoGomez.work",
   },
-  description: "Co-founder of unkey.dev and founder of planetfall.io",
+  description: "Francisco Gómez Works: Freelance Full-Stack and Blockchain Developer. Specializing in startup MVP development, Telegram Bots, fundraising assistance, token launches, and NFT collection creation. I can build your traditional webApp, blockchain project, DeFi dApp, or web3 stuff.",
   openGraph: {
-    title: "chronark.com",
+    title: "Fco Gomez Work",
     description:
-      "Co-founder of unkey.dev and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
+      "Francisco Gómez Works: Freelance Full-Stack and Blockchain Developer. Specializing in startup MVP development, Telegram Bots, fundraising assistance, token launches, and NFT collection creation. I can build your traditional webApp, blockchain project, DeFi dApp, or web3 stuff.",
+    url: "https://fcogomez.work",
+    siteName: "Fco Gomez Work",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "https://fcogomez.work/og.jpg",
         width: 1920,
         height: 1080,
       },
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Chronark",
+    title: "Fco Gomez Work",
     card: "summary_large_image",
   },
   icons: {
