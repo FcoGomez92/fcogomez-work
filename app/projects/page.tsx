@@ -10,7 +10,8 @@ import { CardTag } from "../components/Tag";
 
 const redis = Redis.fromEnv();
 
-// export const revalidate = 60;
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   title: 'Projects'
 };
