@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { notFound } from "next/navigation";
 import { allProjects } from "contentlayer/generated";
 import { Mdx } from "@/app/components/mdx";
@@ -14,7 +15,21 @@ type Props = {
     slug: string;
   };
 };
+export async function generateMetadata(
+  { params }: Props,
+): Promise<Metadata> {
 
+  const slug = params?.slug;
+  const project = allProjects.find((project) => project.slug === slug);
+ 
+  if (!project) {
+    return {}
+  }
+
+  return {
+    title: project.title,
+  }
+}
 const redis = Redis.fromEnv();
 
 export async function generateStaticParams(): Promise<Props["params"][]> {

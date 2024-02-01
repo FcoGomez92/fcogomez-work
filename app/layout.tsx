@@ -6,14 +6,14 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
   title: {
-    default: "FcoGomez.work",
-    template: "%s | FcoGomez.work",
+    default: "FcoGomez.work - Freelance Fullstack & Blockchain Developer",
+    template: "%s | FcoGomez.work - Freelance Fullstack & Blockchain Developer",
   },
-  description: "Francisco Gómez Works: Freelance Full-Stack and Blockchain Developer. Specializing in startup MVP development, Telegram Bots, fundraising assistance, token launches, and NFT collection creation. I can build your traditional webApp, blockchain project, DeFi dApp, or web3 stuff.",
+  description: "Francisco Gómez Works: Freelance Full-Stack and Blockchain Developer. Specializing in startup MVP development, Telegram Bots, fundraising assistance, token launches, and NFT collection creation. I can build your webApp, blockchain project, DeFi dApp, or web3 stuff.",
   openGraph: {
     title: "Fco Gomez Work",
     description:
-      "Francisco Gómez Works: Freelance Full-Stack and Blockchain Developer. Specializing in startup MVP development, Telegram Bots, fundraising assistance, token launches, and NFT collection creation. I can build your traditional webApp, blockchain project, DeFi dApp, or web3 stuff.",
+      "Francisco Gómez Works: Freelance Full-Stack and Blockchain Developer. Specializing in startup MVP development, Telegram Bots, fundraising assistance, token launches, and NFT collection creation. I can build your webApp, blockchain project, DeFi dApp, or web3 stuff.",
     url: "https://fcogomez.work",
     siteName: "Fco Gomez Work",
     images: [

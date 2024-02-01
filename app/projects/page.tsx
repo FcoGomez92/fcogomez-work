@@ -12,8 +12,9 @@ const redis = Redis.fromEnv();
 
 // export const revalidate = 60;
 export const metadata: Metadata = {
-  title: 'Projects',
+  title: 'Projects'
 };
+
 export default async function ProjectsPage() {
   const views = (
     await redis.mget<number[]>(
