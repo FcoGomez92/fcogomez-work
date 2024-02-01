@@ -37,9 +37,7 @@ export default async function ProjectsPage() {
         project.slug !== top3.slug,
     )
     .sort(
-      (a, b) =>
-        new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
-        new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
+      (a, b) => views[b.slug] - views[a.slug]
     );
 
   return (
@@ -69,7 +67,7 @@ export default async function ProjectsPage() {
                     )}
                   </span>
                   </div>
-                  <CardTag label={featured.workType ?? 'own'} />
+                  <CardTag label={featured.workType ?? 'freelance'} />
                 </div>
 
                 <h2
