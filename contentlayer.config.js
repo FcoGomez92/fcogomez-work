@@ -22,9 +22,6 @@ export const Project = defineDocumentType(() => ({
 	contentType: "mdx",
 
 	fields: {
-		published: {
-			type: "boolean",
-		},
 		title: {
 			type: "string",
 			required: true,
@@ -42,6 +39,18 @@ export const Project = defineDocumentType(() => ({
 		repository: {
 			type: "string",
 		},
+		workType: {
+			type: "enum",
+			options: ['freelance', 'personal', 'interview']
+		},
+		tags: {
+			type: 'list',
+      of: { type: 'string' },
+    },
+		slides: {
+			type: "number",
+			required: true,
+		}
 	},
 	computedFields,
 }));
