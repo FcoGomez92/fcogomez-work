@@ -1,7 +1,7 @@
 export const CVButton: React.FC = () => {
 
   const handleDownload = () => {
-    const filePath = '/cv.pdf';
+    const filePath = '/fcogomez_cv.pdf';
     const link = document.createElement('a');
     link.href = filePath;
     link.download = 'fcogomez_cv.pdf';
