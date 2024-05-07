@@ -1,7 +1,7 @@
 ---
 slides: 0
 title: GiftGenius 
-description: The perfect gifts for your love ones, with AI
+description: The perfect gifts for your love ones, with AI.
 date: "2023-06-12"
 repository: FcoGomez92/giftgenius
 workType: personal
@@ -13,4 +13,39 @@ tags:
   
 ---
 
-SOON
+## Summary
+
+Side project in progress. Developed to work with OpenAI and Twitter APIs.
+
+GiftGenius is an assistance tool that helps you choose the perfect gift for anyone. It utilizes artificial intelligence to analyze the Twitter profile of the person in question and returns a brief report with their description, likes, and needs. Additionally, it presents a list of five specially selected products for that person, allowing you to surprise them with a personalized and fitting gift.
+
+The ultimate idea is to monetize through the Amazon affiliate API, enabling search results to be displayed as complete product cards with the option for direct purchase.
+
+## How it works?
+
+- Enter the X (formerly Twitter) user handle of the person you'd like to gift.
+- Confirm that the user profile found is correct, or select the correct one from the list.
+- Wait for our AI assistant to complete their task.
+- Enjoy the perfectly curated gift list for your loved one, or submit a new request.
+
+## Technology Used
+
+- Next.js
+- CSS modules
+- OpenAI API
+- Twitter API
+
+## Pending work and Next features
+
+1. Finish the frontend and add save user queries result into local storage to preview later if needed.
+
+2. Add testing.
+
+3. Include advanced prompt options from the front end. For example: Selecting the relationship with the person, occasion for the gift (birthday, Christmas, Valentine's Day, anniversary, etc.), maximum budget.
+
+4. Clean up the URLs of the tweets. Either remove them directly or replace them with the indicator "(url, image, or video)". This action reduce the number of token sent to OpenAI.
+
+5. Isolate the list of products in an array and then use the Amazon Affiliate API to search for those products.
+
+6. Isolate the used token count and maximum token count when calling OpenAI. In case the prompt is too long, then trim the necessary tweets and restart the request.
+
