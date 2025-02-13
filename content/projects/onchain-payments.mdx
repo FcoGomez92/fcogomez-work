@@ -1,0 +1,55 @@
+---
+slides: 3
+title: On-chain Paywall Gateway
+description: Smart contract system that enables subscription-based access using ERC20 tokens as payment method.
+date: "2025-01-25"
+repository: FcoGomez92/basic-paywall-with-erc20
+workType: freelance
+tags:
+  - DeFi
+  - Smart Contracts
+  - Solidity
+  - Foundry
+  - Blockchain
+---
+
+## Summary
+
+I developed this fully on-chain payment gateway using ERC20 stablecoins for a web2 app seeking to integrate blockchain technology.
+The smart contract enables content creators or service providers to set up a paywall that accepts multiple ERC20 tokens as payment methods, with support for both monthly and yearly subscription tiers.
+The system is designed to be gas-efficient and secure, following best practices in smart contract development. It includes comprehensive test coverage and is built using the Foundry framework for robust development and testing.
+
+## How it works?
+
+- Content creators/service providers deploy the contract specifying which ERC20 tokens they accept and their respective prices for monthly and yearly subscriptions
+- Users can purchase access by paying with any of the supported tokens
+- The contract emits events with subscription details that can be used by off-chain systems to manage access control
+- Contract owner can:
+  - Add or remove supported tokens
+  - Update prices for existing tokens
+  - Withdraw accumulated fees in any supported token
+- The system is designed to be minimal and focused solely on payment processing, with access control handled off-chain for maximum flexibility
+
+## Technology Used
+
+- Solidity
+- Foundry Framework
+- OpenZeppelin SafeERC20 utils
+
+## Responsibilities as developer
+
+- Design a secure and gas-efficient smart contract architecture
+- Implement robust token management system supporting multiple ERC20 tokens
+- Create flexible pricing mechanism for different subscription durations
+- Develop comprehensive test suite covering all contract functionality
+- Set up deployment scripts for multiple networks (local, testnet, mainnet)
+- Implement proper access control and ownership management
+- Ensure secure token handling using SafeERC20
+- Create helper configurations for different network deployments
+- Document code thoroughly for maintainability
+
+## Key accomplishments:
+
+- Bringing web2 applications closer to decentralized blockchain technology, fostering mass adoption.
+- Created a gas-optimized contract by minimizing storage operations and using efficient data structures
+- Achieved almost 100% test coverage with both unit and integration tests
