@@ -48,6 +48,7 @@ export const metadata: Metadata = {
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: 'swap',
 });
 
 const calSans = LocalFont({
@@ -67,7 +68,7 @@ export default function RootLayout({
       </head>
       <body
         className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-          }`}
+          } font-sans`}
       >
         {children}
       </body>
